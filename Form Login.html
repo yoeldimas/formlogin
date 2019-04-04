@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<link href="dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<script>
+		function showValues ()
+	{
+		var username = "yoeldimas";
+		var password = "123";
+		var uname = document.getElementById("username").value;
+		var pwd = document.getElementById("password").value;
+		//Validasi nama harus diisi
+		if(uname == ""){
+			alert("Maaf username harus diisi");
+			return true;
+		}
+		if(pwd == ""){
+			alert("Maaf password harus diisi");
+			return true;
+		}
+		if ((uname==username) && (pwd == password)){
+			teks = "Login Successful";
+			alert(teks);
+			return true;
+		}
+		else
+			alert ("Login Failed");
+		
+	}
+	</script>
+	
+</head>
+<body>
+	<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2 align="center">FORM LOGIN</h2>	
+				</div>
+			</div>
+			<form action="home.html" method="post">
+			<div class="row">
+				<div class="col-md-3">
+					Username :
+				</div>
+				<div class="col-md-6">
+					<input type="text" placeholder="Masukkan Username" class="form-control" name="username" id="username" required>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					Password :	
+				</div>
+				<div class="col-md-6">
+					<input type="password" placeholder="Masukkan Password" class="form-control" name="password" id="password" required>
+				</div>
+				</div> <br>
+			<div class="row" align="center">
+				<div class="col-md-12">
+					<input type="button" value="Login" class="btn btn-success" onClick = "showValues()">
+				</div>
+			</div>
+		</div>
+	</form>		
+</body>
+</html>
